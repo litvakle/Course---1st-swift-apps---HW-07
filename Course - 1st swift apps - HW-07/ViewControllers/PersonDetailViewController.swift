@@ -22,7 +22,7 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        personLabel.text = person.desciption
+        personLabel.text = person.fullname
         phoneLabel.text = "Phone: \(person.phone)"
         emailLabel.text = "E-mail: \(person.email)"
     }

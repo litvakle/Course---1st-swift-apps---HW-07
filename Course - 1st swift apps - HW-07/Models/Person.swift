@@ -8,14 +8,14 @@
 
 struct Person {
     
-    var firstname: String
-    var lastname: String
-    var phone: String
-    var email: String
+    let firstname: String
+    let lastname: String
+    let phone: String
+    let email: String
     
     static var persons: [Person]? // i want similar data in both tables
     
-    var desciption: String {
+    var fullname: String {
         return lastname + " " + firstname
     }
 }
@@ -26,53 +26,10 @@ extension Person {
             return persons // if already have person list - return it
         }
         
-        var firstnames = [
-            "Alexey",
-            "Alexandr",
-            "Oleg",
-            "Ilya",
-            "Fedor",
-            "Evgeniy",
-            "Zurab",
-            "Rustem",
-            "Valeriy",
-            "Prohor"]
-        var lastnames = [
-            "Smolov",
-            "Putin",
-            "Gugo",
-            "Shopen-dlinnofamilniy",
-            "Zuev",
-            "Sorokin",
-            "Marfin",
-            "Dud'",
-            "Komarov",
-            "Zinin"
-        ]
-        var phones = [
-        "8-111-11-11-111",
-        "8-222-22-22-222",
-        "8-333-33-33-333",
-        "8-444-44-44-444",
-        "8-555-55-55-555",
-        "8-777-77-77-777",
-        "8-888-88-88-888",
-        "8-999-99-99-999",
-        "8-123-45-67-890",
-        "8-098-76-54-321",
-        ]
-        var emails = [
-        "pamposhka15@mail.ru",
-        "gus03@inbox.ru",
-        "sobaka@gmail.com",
-        "skakdollar@1c.ru",
-        "polovina9@ufanet.ru",
-        "barsuk1990_longstring@apple.com",
-        "shalom@list.ru",
-        "ogonek333@gmail.com",
-        "pusk321@start.com",
-        "lobsterfan@icloud.com"
-        ]
+        var firstnames = DataManager.shared.firstnames
+        var lastnames = DataManager.shared.lastnames
+        var phones = DataManager.shared.phones
+        var emails = DataManager.shared.emails
         
         var persons: [Person] = []
         

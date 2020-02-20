@@ -21,7 +21,7 @@ class PersonsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel?.text = persons[indexPath.row].desciption
+        cell.textLabel?.text = persons[indexPath.row].fullname
 
         return cell
     }
